@@ -1,0 +1,30 @@
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.dll
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.pdb
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.dll.manifest
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.vsto
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csprojAssemblyReference.cache
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.Properties.Resources.resources
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csproj.GenerateResource.cache
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csproj.CoreCompileInputs.cache
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csproj.CopyComplete
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.dll
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.pdb
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\elblo\source\repos\OutlookAddIn1\OutlookAddIn1\bin\Debug\Newtonsoft.Json.xml
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.dll
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.pdb
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.dll.manifest
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\OutlookAddIn1.vsto
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\Newtonsoft.Json.dll
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\bin\Debug\Newtonsoft.Json.xml
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csprojAssemblyReference.cache
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.Properties.Resources.resources
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csproj.GenerateResource.cache
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csproj.CoreCompileInputs.cache
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.csproj.CopyComplete
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.dll
+D:\Desktop\Proyectos\Proyectos de Python\PyTracker\OutlookAddIn1\OutlookAddIn1\obj\Debug\OutlookAddIn1.pdb

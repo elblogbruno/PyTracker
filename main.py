@@ -3,9 +3,12 @@ import time
 import os
 import secrets
 import threading
+import requests
+import socket
+
 from datetime import datetime
 
-from utils import check,write_data
+from utils import check,write_data,find_data,get_options,get_local_ip
 from flask_mail import Mail, Message
 from flask import Flask, jsonify, flash, request, send_file
 
@@ -19,17 +22,20 @@ logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(level
                     level=logging.INFO)
 
 app.secret_key = secret
+notify_email,notify_password,notify_stmp_server = get_options(logging)
 
 app.config.update(
 	DEBUG=True,
 	#EMAIL SETTINGS
-	MAIL_SERVER='email',
+	MAIL_SERVER=notify_stmp_server,
 	MAIL_PORT=465,
 	MAIL_USE_SSL=True,
-	MAIL_USERNAME = 'example@email.com',
-	MAIL_PASSWORD = 'examplepassword'
-	)
+	MAIL_USERNAME = notify_email,
+	MAIL_PASSWORD = notify_password
+)
     
+
+
 mail = Mail(app)
 
 current_tracking_codes = {}
@@ -40,8 +46,9 @@ def get_my_ip():
 def send_on_open_email(sender, receiver, ip, tracking_code):
     try:
         msg = Message(f"{receiver} has opened the email",
-          sender=sender,
+          sender=notify_email,
           recipients=[sender])
+
         now = datetime.now()
 
         current_time = now.strftime("%H:%M:%S")
@@ -55,6 +62,7 @@ def send_on_open_email(sender, receiver, ip, tracking_code):
         del current_tracking_codes[tracking_code]
 
     except Exception as e:
+        print(e)
         app.logger.warning(e)
 
 
@@ -65,17 +73,27 @@ def render_image():
     tracking_code = int(request.args.get('tracking_code'))
     
     app.logger.warning(tracking_code)
+    ip = get_my_ip()
 
-    if tracking_code in current_tracking_codes:
-        ip = get_my_ip()
-        sender = current_tracking_codes[tracking_code][0]
-        receiver = current_tracking_codes[tracking_code][1]
-        send_on_open_email(sender, receiver,ip,tracking_code)
-        # t = threading.Thread(target=send_on_open_email, args=(sender, receiver,ip,tracking_code,))
-        # t.daemon = True
-        # t.start()
-
-    return send_file('pi.png', mimetype='image/gif')
+    my_ip = get_local_ip()
+    print(my_ip,ip)
+    
+    #my_ip = requests.get('https://checkip.amazonaws.com').text.strip()
+    if ip != my_ip:
+        if tracking_code in current_tracking_codes:
+            
+            sender = current_tracking_codes[tracking_code][0]
+            receiver = current_tracking_codes[tracking_code][1]
+            send_on_open_email(sender, receiver,ip,tracking_code)
+        else: 
+            found,row = find_data(tracking_code)
+            if found:
+                print(row)
+        return send_file('sprites/pi.png', mimetype='image/gif')
+    else:
+        print("receiver is the sender")
+    return ""
+  
 
 
 

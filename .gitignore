@@ -3,6 +3,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 *.csv
 *.log
+*.json
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/

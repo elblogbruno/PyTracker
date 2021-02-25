@@ -1,8 +1,11 @@
-# PyTracker
+![npm package](doc/PyTrackerLogo.png)
 
-This is a very basic mail tracking service which I developed for my personal use and it is motivated by https://github.com/prashantsengar/mTracker created by Prashant Sengar.
+This is a mail tracking service which I developed for my personal use and it is motivated by https://github.com/prashantsengar/mTracker created by Prashant Sengar.
 
 It consist of a python server and a work in progress outlook plugin that contacts the server and adds a tracking code to the email, so you know when someone has oppened it!
+
+The idea of this project is to develop extensions for every browser and email service, based on the tracking api provided by PyTracker!
+
 
 
 ## How to use it:

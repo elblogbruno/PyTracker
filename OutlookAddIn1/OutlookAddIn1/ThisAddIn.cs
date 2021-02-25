@@ -30,12 +30,11 @@ namespace OutlookAddIn1
 
                 foreach (Outlook.Recipient recip in recips)
                 {
-                    string s = "<HTML><BODY>{0}</BODY></HTML>";
+                    String s = "<HTML><BODY>{0}</BODY></HTML>";
 
-                    string addToBody = string.Format(s, GetTrackingCode(mail.SenderEmailAddress, recip.Address).inject_code);
+                    String addToBody = String.Format(s, GetTrackingCode(mail.SenderEmailAddress, recip.Address).inject_code);
 
-                    if (!mail.HTMLBody.EndsWith(addToBody))
-                        mail.HTMLBody += addToBody;
+                    mail.HTMLBody = addToBody;
                 }
 
 
@@ -46,8 +45,10 @@ namespace OutlookAddIn1
         public Response GetTrackingCode(string sender,string receiver)
         {
             string responseHtmlCode = "-1";
-            string s = "http://localhost:5000/get_tracking_code_for_email?sender={0}&receiver={1}";
-            string url = string.Format(s, sender, receiver);
+            string server_url = Properties.Settings.Default.server_url;
+
+            string s = "{0}/get_tracking_code_for_email?sender={1}&receiver={2}";
+            string url = string.Format(s, server_url, sender, receiver);
             // Create a request for the URL.
             WebRequest request = WebRequest.Create(url);
             // If required by the server, set the credentials.

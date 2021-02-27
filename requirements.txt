@@ -1,3 +1,5 @@
 requests
 flask
 flask_mail
+pysqlite3
+email_validator

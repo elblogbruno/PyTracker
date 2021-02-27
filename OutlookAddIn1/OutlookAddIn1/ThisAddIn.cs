@@ -14,7 +14,8 @@ using System.Runtime.InteropServices;
 namespace OutlookAddIn1
 {
     public partial class ThisAddIn
-    {    
+    {
+
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
             Application.ItemSend += new
@@ -31,17 +32,23 @@ namespace OutlookAddIn1
                 foreach (Outlook.Recipient recip in recips)
                 {
                     String s = "<HTML><BODY>{0}</BODY></HTML>";
+                    Response response = GetTrackingCode(mail.SenderEmailAddress, recip.Address);
+                    String addToBody = String.Format(s, response.inject_code);
+                    
 
-                    String addToBody = String.Format(s, GetTrackingCode(mail.SenderEmailAddress, recip.Address).inject_code);
+                    if (!mail.HTMLBody.EndsWith(addToBody))
+                        mail.HTMLBody += addToBody;
 
-                    mail.HTMLBody = addToBody;
+
+                    //mail.HTMLBody.Replace("TRACKING_CODE", response.tracking_code);
+
+
                 }
 
 
             }
         }
-
-       
+        
         public Response GetTrackingCode(string sender,string receiver)
         {
             string responseHtmlCode = "-1";
@@ -103,7 +110,11 @@ namespace OutlookAddIn1
                 get;
                 set;
             }
-
+            public string tracking_code
+            {
+                get;
+                set;
+            }
         }
 
         #region Código generado por VSTO

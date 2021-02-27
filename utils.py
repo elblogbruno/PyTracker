@@ -2,6 +2,12 @@ from email_validator import validate_email, EmailNotValidError
 import csv
 import os
 import json
+import time
+
+#Creates a random number it will be used as an identifier.
+def create_tracking_code():
+    return str(int(time.time()%99999))
+
 # Define a function for 
 # for validating an Email 
 def check(email):  
@@ -15,20 +21,7 @@ def check(email):
         print(str(e))
         return False
 
-def write_data(name, email, url):
-    with open('data.csv', 'a+') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow([name, email, url])
-
-def find_data(tracking_code):
-    with open('data.csv') as f:
-        reader = csv.reader(f)
-        reader.next()
-        for row in reader:
-            if tracking_code in row:
-                return True,row
-    return False
-
+#Ask and writes server options
 def get_options(logging):
     logging.info("Saving options.")
     if os.path.isfile('options.json'):
@@ -56,6 +49,7 @@ def get_options(logging):
 
             return options['notify_email'],options['notify_password'],options['notify_stmp_server']
 
+#Get local ip of the server.
 def get_local_ip():
     import socket
     """Try to determine the local IP address of the machine."""

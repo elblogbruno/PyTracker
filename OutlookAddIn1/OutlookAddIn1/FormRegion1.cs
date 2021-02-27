@@ -43,7 +43,7 @@ namespace OutlookAddIn1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.server_url = "http://192.168.1.44:5000/";
+            Properties.Settings.Default.server_url = "http://95.111.245.169:5000/";
             Properties.Settings.Default.Save();
 
             MessageBox.Show("Saved settings: " + Properties.Settings.Default.server_url);
